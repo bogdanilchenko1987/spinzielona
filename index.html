@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Join SpinZielona – Poland’s most exciting and 100% free fantasy football platform. Build your team, join custom leagues, compete with friends, and enjoy real-time scoring. No payments, no betting – just pure football fun."
+    />
+    <meta
+      name="keywords"
+      content="fantasy football Poland, free fantasy league, online football manager, Polish fantasy football, football strategy game, SpinZielona fantasy"
+    />
+    <title>
+      SpinZielona | Free Fantasy Football Platform for Fans in Poland
+    </title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+
+            },
+            fontFamily: {
+         
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800 font-sans">
+
+ <header class="sticky top-0 z-50 w-full shadow-md font-sans bg-gradient-to-r from-white via-blue-500 to-white backdrop-blur-lg transition-all duration-300">
+      <div class="flex flex-wrap items-center justify-between px-6 md:px-10 py-4 min-h-[70px]">
+        
+      
+        <a href="/" class="flex items-center gap-x-2 hover:opacity-90 transition">
+          <img src="/assets/images/icon.png" alt="logo" class="w-12 h-12" />
+          <p class="text-lg font-extrabold text-gray-800 tracking-wide uppercase">spinzielona</p>
+        </a>
+    
+     
+        <ul class="hidden lg:flex gap-x-6 font-medium text-sm text-gray-700">
+          <li><a href="/" class="hover:text-black transition">Home</a></li>
+          <li><a href="/#how-to-play" class="hover:text-black transition">How to Play</a></li>
+          <li><a href="/#features" class="hover:text-black transition">Features</a></li>
+          <li><a href="/#faq" class="hover:text-black transition">FAQ</a></li>
+          <li><a href="/#contact" class="hover:text-black transition">Contact</a></li>
+        </ul>
+    
+   
+        <div class="flex items-center gap-x-4">
+          <a href="/#contact" id="loginButton" class="hidden md:inline-block text-sm font-medium px-4 py-2 rounded-full border border-blue-600 text-blue-600 transition-colors duration-300 hover:bg-blue-50">
+            Download App
+          </a>
+    
+      
+          <button id="toggleOpen" class="lg:hidden focus:outline-none">
+            <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    
+      <!-- Mobile Menu -->
+      <div id="collapseMenu" class="hidden fixed top-0 right-0  w-4/5 max-w-sm bg-white z-40 p-6 overflow-y-auto transform transition-transform duration-300 translate-x-full">
+
+        <div class="flex justify-between items-center mb-4">
+          <p class="text-lg font-bold">Menu</p>
+          <button id="toggleClose">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <ul class="space-y-4 text-gray-800 text-base">
+          <li><a href="/" class="block hover:text-blue-600">Home</a></li>
+          <li><a href="/#how-to-play" class="block hover:text-blue-600">How to Play</a></li>
+          <li><a href="/#features" class="block hover:text-blue-600">Features</a></li>
+          <li><a href="/#faq" class="block hover:text-blue-600">FAQ</a></li>
+          <li><a href="/#contact" class="block hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    
+    <main class="">
+      <section class="relative w-full h-[90vh] overflow-hidden">
+        <!-- Background image -->
+        <div class="absolute inset-0 z-0">
+          <img src="/assets/images/hero-bg.jpg" alt="fantasy football background"
+            class="w-full h-full object-cover brightness-[0.5] scale-105 hover:scale-110 transition-transform duration-700 ease-in-out" />
+        </div>
+      
+        <!-- Overlay content -->
+        <div class="relative z-10 flex flex-col justify-center items-center text-center h-full text-white px-6">
+          <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg">
+            Play Fantasy Football Like Never Before
+          </h1>
+          <p class="text-lg sm:text-xl max-w-xl mb-6 drop-shadow-sm">
+            Join SpinZielona – Poland’s most exciting fantasy football platform. Build your squad, compete with friends, and rise through the league ranks.
+          </p>
+          <a href="#how-to-play"
+            class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium text-base rounded-full transition">
+            Get Started Now
+          </a>
+        </div>
+      </section>
+      
+      <section id="how-to-play" class="relative bg-white py-24 px-6 overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center mb-20">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-4">How to Play</h2>
+          <p class="text-lg text-gray-600">Follow the path to fantasy football greatness.</p>
+        </div>
+      
+        <!-- Steps Wrapper -->
+        <div class="relative max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 z-10">
+          <!-- Decorative path SVG -->
+          <svg class="absolute top-16 left-0 w-full hidden lg:block z-0" height="300" viewBox="0 0 1000 200" fill="none">
+            <path d="M0,100 C250,0 750,200 1000,100" stroke="#dbeafe" stroke-width="3" stroke-dasharray="8 6" />
+          </svg>
+      
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center relative z-10 transition-transform hover:scale-105 duration-300">
+            <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center text-2xl mb-4 shadow-md">
+              🧑‍💻
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Sign Up</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Create a free account to get started on SpinZielona.</p>
+          </div>
+      
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center relative z-10 transition-transform hover:scale-105 duration-300">
+            <div class="w-16 h-16 bg-green-100 text-green-700 rounded-full flex items-center justify-center text-2xl mb-4 shadow-md">
+              ⚽
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Choose League</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Pick a public league or create your own with friends.</p>
+          </div>
+      
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center relative z-10 transition-transform hover:scale-105 duration-300">
+            <div class="w-16 h-16 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center text-2xl mb-4 shadow-md">
+              📋
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Draft Players</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Build your fantasy team with real football stars.</p>
+          </div>
+      
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center text-center relative z-10 transition-transform hover:scale-105 duration-300">
+            <div class="w-16 h-16 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center text-2xl mb-4 shadow-md">
+              🛠️
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Set Lineup</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Manage and edit your lineup before each round.</p>
+          </div>
+      
+          <!-- Step 5 -->
+          <div class="flex flex-col items-center text-center relative z-10 transition-transform hover:scale-105 duration-300">
+            <div class="w-16 h-16 bg-red-100 text-red-700 rounded-full flex items-center justify-center text-2xl mb-4 shadow-md">
+              📈
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Score Points</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Earn points based on real-life player performance.</p>
+          </div>
+      
+          <!-- Step 6 -->
+          <div class="flex flex-col items-center text-center relative z-10 transition-transform hover:scale-105 duration-300">
+            <div class="w-16 h-16 bg-indigo-100 text-indigo-700 rounded-full flex items-center justify-center text-2xl mb-4 shadow-md">
+              🏆
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Climb Ranks</h3>
+            <p class="text-sm text-gray-600 max-w-xs">Compete in leagues and top the fantasy charts.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      <section>
+        <div
+          class="flex items-center text-center p-8 min-h-[380px] bg-gradient-to-r from-white via-blue-500 to-white w-full"
+        >
+          <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto text-center mb-2">
+              <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Your Fantasy Football Journey Starts Here</h2>
+              <p class="text-lg text-gray-600">Creating your dream team has never been this simple — or this fun. SpinZielona lets you dive into the action with an easy-to-use platform and exciting competitions. No payments, no pressure — just football, strategy, and friendly rivalry. Whether you're playing solo or with friends, your journey to fantasy greatness begins with one click. Join us now and feel the thrill of managing your own squad.</p>
+            </div>
+            <a href="/#contact">
+              <button
+                type="button"
+                class="px-6 py-3 mt-3 text-white text-base rounded-full font-medium tracking-wider border-none outline-none bg-blue-800 hover:bg-blue-900"
+              >
+              Create Your Team
+              </button></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class=" py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Main Platform Features</h2>
+          <p class="text-lg text-gray-600">Explore what makes SpinZielona your #1 fantasy football destination.</p>
+        </div>
+      
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 max-w-6xl mx-auto">
+          <!-- Feature Card -->
+          <div class="relative group h-64 overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="/assets/images/a1.jpg" alt="Live Scoring" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            
+            <!-- Title (always visible) -->
+            <div class="absolute top-0 left-0 w-full  text-white px-4 py-3">
+              <h3 class="text-2xl font-semibold">Live Scoring</h3>
+            </div>
+      
+            <!-- Hover Description -->
+            <div class="absolute bottom-0 left-0 w-full bg-black/80 text-white px-4 py-3 text-lg transition-all duration-500 transform translate-y-full group-hover:translate-y-0">
+              <p>Track every pass, tackle, and goal in real time. With our advanced live scoring system, your fantasy points update as the action unfolds — no delays, no refreshes needed.</p>
+            </div>
+          </div>
+      
+          <!-- Repeat for other cards -->
+          <div class="relative group h-64 overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="/assets/images/a2.jpg" alt="Smart Drafts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-0 left-0 w-full  text-white px-4 py-3">
+              <h3 class="text-2xl font-semibold">Smart Drafts</h3>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full bg-black/80 text-white px-4 py-3 text-lg transition-all duration-500 transform translate-y-full group-hover:translate-y-0">
+              <p>Build your squad with ease using intelligent draft suggestions, filters by position and stats, and a sleek, intuitive interface that helps you stay ahead of the competition.</p>
+            </div>
+          </div>
+      
+          <div class="relative group h-64 overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="/assets/images/a3.jpg" alt="Custom Leagues" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-0 left-0 w-full  text-white px-4 py-3">
+              <h3 class="text-2xl font-semibold">Custom Leagues</h3>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full bg-black/80 text-white px-4 py-3 text-lg transition-all duration-500 transform translate-y-full group-hover:translate-y-0">
+              <p>Create your own private league with friends or dive into public competitions. Set your rules, invite players, and enjoy a fantasy experience tailored to your style..</p>
+            </div>
+          </div>
+      
+          <div class="relative group h-64 overflow-hidden rounded-xl shadow-lg cursor-pointer">
+            <img src="/assets/images/a4.jpg" alt="Mobile Friendly" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute top-0 left-0 w-full  text-white px-4 py-3">
+              <h3 class="text-2xl font-semibold">Mobile Friendly</h3>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full bg-black/80 text-white px-4 py-3 text-lg transition-all duration-500 transform translate-y-full group-hover:translate-y-0">
+              <p>Take your team wherever you go. Our mobile-optimized platform gives you full control — update your lineup, check scores, and follow matches right from your phone.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+<section class="bg-white p-6 mb-16" id="faq">
+  <div class="max-w-6xl mx-auto text-center mb-20">
+    <h2 class="text-4xl font-extrabold text-gray-800 mb-4">FAQs</h2>
+    <p class="text-lg text-gray-600">The most interesting questions about our application</p>
+  </div>
+  <div class="space-y-4">
+    <details class="group [&_summary::-webkit-details-marker]:hidden" open>
+      <summary
+        class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+      >
+        <h2 class="text-lg font-medium">1. What is SpinZielona and how does it work?</h2>
+  
+        <svg
+          class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+  
+      <p class="px-4 pt-4 text-gray-900">
+        SpinZielona is an online fantasy football platform designed for fans in Poland and beyond. You create a virtual team by selecting real football players. As these players perform in actual matches, you earn points based on their stats — goals, assists, clean sheets, and more. You can join public leagues or create private ones with friends to compete throughout the season.
+      </p>
+    </details>
+  
+    <details class="group [&_summary::-webkit-details-marker]:hidden">
+      <summary
+        class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+      >
+        <h2 class="text-lg font-medium">2. Is it free to play?</h2>
+  
+        <svg
+          class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+  
+      <p class="px-4 pt-4 text-gray-900">
+        Yes! SpinZielona is completely free to use. There are no payments, entry fees, or in-app purchases. The platform is designed purely for entertainment, strategy, and friendly competition — no real money is involved at any stage of gameplay.
+      </p>
+    </details>
+  
+    <details class="group [&_summary::-webkit-details-marker]:hidden">
+      <summary
+        class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+      >
+        <h2 class="text-lg font-medium">3. How do I earn points in the game?</h2>
+  
+        <svg
+          class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+  
+      <p class="px-4 pt-4 text-gray-900">
+        Points are awarded based on your selected players’ real-life performance in official football matches. For example, if your striker scores a goal, your team receives fantasy points. We use a transparent scoring system where each action — goals, assists, saves, tackles — contributes to your overall weekly score.
+      </p>
+    </details>
+    <details class="group [&_summary::-webkit-details-marker]:hidden">
+      <summary
+        class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+      >
+        <h2 class="text-lg font-medium">4. Can I play with my friends?</h2>
+  
+        <svg
+          class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+  
+      <p class="px-4 pt-4 text-gray-900">
+        Absolutely! You can create your own private league, invite your friends via a custom link, and compete head-to-head each gameweek. You can also join existing public leagues if you’re looking for a wider challenge against other fantasy football fans.
+      </p>
+    </details>
+    <details class="group [&_summary::-webkit-details-marker]:hidden">
+      <summary
+        class="flex items-center justify-between gap-1.5 rounded-md border border-gray-100 bg-gray-50 p-4 text-gray-900"
+      >
+        <h2 class="text-lg font-medium">5. Do I need to follow every game to play?</h2>
+  
+        <svg
+          class="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </summary>
+  
+      <p class="px-4 pt-4 text-gray-900">
+        Not at all. While staying updated helps, SpinZielona makes it easy for casual players. You can set your lineup in advance, and our interface highlights key stats, top performers, and recommendations to help you stay competitive — even if you don’t watch every match.
+      </p>
+    </details>
+  </div>
+</section>
+
+      <section id="contact">
+        <div class="p-4 mx-auto max-w-xl bg-white">
+          <div class="max-w-6xl mx-auto text-center mb-20">
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Contact Us</h2>
+            <p class="text-lg text-gray-600">You can contact Us any time for more information about online fantasy football App</p>
+          </div>
+          <form class="mt-8 space-y-5">
+            <div>
+              <label class="text-sm text-slate-800 font-medium mb-2 block"
+                >Name</label
+              >
+              <input
+                required
+                type="text"
+                placeholder="Enter Name"
+                class="w-full py-2.5 px-4 text-slate-800 bg-gray-100 border focus:border-slate-900 focus:bg-transparent text-sm outline-none transition-all"
+              />
+            </div>
+            <div>
+              <label class="text-sm text-slate-800 font-medium mb-2 block"
+                >Email</label
+              >
+              <input
+                required
+                type="email"
+                placeholder="Enter Email"
+                class="w-full py-2.5 px-4 text-slate-800 bg-gray-100 border focus:border-slate-900 focus:bg-transparent text-sm outline-none transition-all"
+              />
+            </div>
+            <div>
+              <label class="text-sm text-slate-800 font-medium mb-2 block"
+                >Subject</label
+              >
+              <input
+                required
+                type="text"
+                placeholder="Enter Subject"
+                class="w-full py-2.5 px-4 text-slate-800 bg-gray-100 border focus:border-slate-900 focus:bg-transparent text-sm outline-none transition-all"
+              />
+            </div>
+            <div>
+              <label class="text-sm text-slate-800 font-medium mb-2 block"
+                >Message</label
+              >
+              <textarea
+                required
+                placeholder="Enter Message"
+                rows="4"
+                class="w-full px-4 text-slate-800 bg-gray-100 border focus:border-slate-900 focus:bg-transparent text-sm pt-3 outline-none transition-all"
+              ></textarea>
+            </div>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LdwNhQrAAAAABa6a1--e4ySIjWEh0cuzpcCsK5x"
+            ></div>
+            <button
+              type="button"
+              class="!mt-8 text-white bg-blue-600 hover:bg-blue-700 rounded-full tracking-wide text-[15px] px-4 py-2 w-[33%] outline-none"
+            >
+              Send
+            </button>
+          </form>
+          <div
+            id="success-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+          >
+            <div
+              class="bg-white px-6 py-4 rounded shadow-md text-center max-w-sm w-full"
+            >
+              <p class="text-lg font-semibold text-slate-800">
+                Thank you for choosing our site. We will contact you soon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <div
+          class="flex items-center text-center p-8 min-h-[380px] bg-gradient-to-r from-white via-blue-500 to-white w-full"
+        >
+          <div class="max-w-4xl mx-auto">
+            <div class="max-w-6xl mx-auto text-center mb-2">
+              <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Ready to Join the Game?</h2>
+              <p class="text-lg text-gray-600">Fantasy football isn’t just a game — it’s your chance to manage, compete, and prove your football IQ. With SpinZielona, every match becomes more exciting, and every lineup decision counts. Join thousands of fans building their dream teams and chasing glory each week. Whether you're a seasoned tactician or just getting started, there's a league waiting for you. Take the shot and step into the world of strategy, passion, and pure football fun.</p>
+            </div>
+            <a href="/#contact">
+              <button
+                type="button"
+                class="px-6 py-3 mt-3 text-white text-base rounded-full font-medium tracking-wider border-none outline-none bg-blue-800 hover:bg-blue-900"
+              >
+              Start to play
+              </button></a
+            >
+          </div>
+        </div>
+      </section> 
+
+    </main>
+    <footer class="bg-white">
+      <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-start lg:gap-8">
+       
+
+          <div
+            class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-8"
+          >
+            <div class="col-span-2">
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+                  18+ Disclaimer
+                </h2>
+
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                  SpinZielona is a fantasy football platform created purely for entertainment and community engagement. All gameplay is entirely free and does not involve any form of real-money transactions, betting, or gambling. No cash prizes are offered, and no virtual assets can be exchanged for money. The platform is intended strictly for individuals aged 18 and above. Performance within the game does not reflect or predict outcomes in real-life sports or any betting-related activity.
+                </p>
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                  Email: support@spinzielona.com
+                </p>
+              </div>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900 dark:text-white">Privacy</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="/privacy/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Privacy Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/cookies/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Cookies Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900 dark:text-white">
+                Links
+              </p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="/refund/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Refund Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/terms/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Terms and Condition
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900 dark:text-white">Legal</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="/legal/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Legalities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/#contact"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                    Contacts
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-8 border-t border-gray-100 pt-8 dark:border-gray-800">
+          <div class="sm:flex sm:justify-between">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              &copy; 2025. spinzielona.com. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/mobile-menu.js"></script>
+    <script src="/assets/js/button.js"></script>
+    <script src="/assets/js/form.js"></script>
+    <script src="/assets/js/captcha.js"></script>
+    <script src="/assets/js/modal.js"></script>
+  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/493a688953506c50e90752d9/script.js"></script> 
+  
+<!-- Age Confirmation Modal -->
+<div id="ageModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/100 text-white hidden">
+  <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center w-full max-w-md mx-4">
+    <h2 class="text-2xl font-bold mb-4">Are you 18+ or Above?</h2>
+
+    <button id="confirmAgeBtn" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-2 rounded text-white font-semibold">
+      Yes
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

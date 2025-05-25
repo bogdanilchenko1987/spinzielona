@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/images/icon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Join SpinZielona – Poland’s most exciting and 100% free fantasy football platform. Build your team, join custom leagues, compete with friends, and enjoy real-time scoring. No payments, no betting – just pure football fun."
+    />
+    <meta
+      name="keywords"
+      content="fantasy football Poland, free fantasy league, online football manager, Polish fantasy football, football strategy game, SpinZielona fantasy"
+    />
+    <title>
+      SpinZielona | Free Fantasy Football Platform for Fans in Poland
+    </title>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+
+            },
+            fontFamily: {
+         
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800 font-sans">
+
+ <header class="sticky top-0 z-50 w-full shadow-md font-sans bg-gradient-to-r from-white via-blue-500 to-white backdrop-blur-lg transition-all duration-300">
+      <div class="flex flex-wrap items-center justify-between px-6 md:px-10 py-4 min-h-[70px]">
+        
+      
+        <a href="/" class="flex items-center gap-x-2 hover:opacity-90 transition">
+          <img src="/assets/images/icon.png" alt="logo" class="w-12 h-12" />
+          <p class="text-lg font-extrabold text-gray-800 tracking-wide uppercase">spinzielona</p>
+        </a>
+    
+     
+        <ul class="hidden lg:flex gap-x-6 font-medium text-sm text-gray-700">
+          <li><a href="/" class="hover:text-black transition">Home</a></li>
+          <li><a href="/#how-to-play" class="hover:text-black transition">How to Play</a></li>
+          <li><a href="/#features" class="hover:text-black transition">Features</a></li>
+          <li><a href="/#faq" class="hover:text-black transition">FAQ</a></li>
+          <li><a href="/#contact" class="hover:text-black transition">Contact</a></li>
+        </ul>
+    
+   
+        <div class="flex items-center gap-x-4">
+          <a href="/#contact" id="loginButton" class="hidden md:inline-block text-sm font-medium px-4 py-2 rounded-full border border-blue-600 text-blue-600 transition-colors duration-300 hover:bg-blue-50">
+            Download App
+          </a>
+    
+      
+          <button id="toggleOpen" class="lg:hidden focus:outline-none">
+            <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    
+      <!-- Mobile Menu -->
+      <div id="collapseMenu" class="hidden fixed top-0 right-0  w-4/5 max-w-sm bg-white z-40 p-6 overflow-y-auto transform transition-transform duration-300 translate-x-full">
+
+        <div class="flex justify-between items-center mb-4">
+          <p class="text-lg font-bold">Menu</p>
+          <button id="toggleClose">
+            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <ul class="space-y-4 text-gray-800 text-base">
+          <li><a href="/" class="block hover:text-blue-600">Home</a></li>
+          <li><a href="/#how-to-play" class="block hover:text-blue-600">How to Play</a></li>
+          <li><a href="/#features" class="block hover:text-blue-600">Features</a></li>
+          <li><a href="/#faq" class="block hover:text-blue-600">FAQ</a></li>
+          <li><a href="/#contact" class="block hover:text-blue-600">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+ 
+    <main class="max-w-4xl mx-auto px-6 py-20 text-gray-800">
+      <h1 class="text-3xl font-extrabold mb-6 text-center">Refund Policy</h1>
+      <p class="text-base text-gray-600 mb-10 text-center">
+        This Refund Policy outlines how SpinZielona handles refund requests. By using our platform, you agree to the conditions set forth in this policy.
+      </p>
+    
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">General Policy</h2>
+        <p class="text-gray-700">
+          SpinZielona is a free-to-use fantasy football platform. We do not process financial transactions or charge users to participate in leagues or use the platform. As such, refunds are generally not applicable.
+        </p>
+      </section>
+    
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">Refund Scenarios</h2>
+        <p class="text-gray-700">
+          Since SpinZielona does not require payment for access, refund scenarios are limited. However, in the event of any accidental payments related to third-party promotions or errors, users may contact our support team to request a review.
+        </p>
+      </section>
+    
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">How to Request a Review</h2>
+        <p class="text-gray-700">
+          If you believe a refund is necessary due to an error or technical issue, please contact us at <a href="mailto:support@spinzielona.com" class="text-blue-600 underline">support@spinzielona.com</a> within 7 days of the issue. Include relevant details such as the nature of the problem, screenshots, and any reference numbers.
+        </p>
+      </section>
+    
+      <section class="mb-10">
+        <h2 class="text-xl font-semibold mb-2">Review and Resolution</h2>
+        <p class="text-gray-700">
+          Our team will investigate each case individually and respond within a reasonable timeframe. Please note that since no real-money features exist on the platform, most cases are resolved through technical support rather than financial refund.
+        </p>
+      </section>
+    
+      <section>
+        <h2 class="text-xl font-semibold mb-2">Policy Updates</h2>
+        <p class="text-gray-700">
+          We reserve the right to update this Refund Policy at any time. Changes will be posted on this page and become effective immediately upon publication.
+        </p>
+      </section>
+    
+      <p class="text-sm text-gray-500 mt-12 text-center">Last updated: April 2025</p>
+    </main>
+    
+    
+
+    <footer class="bg-white">
+      <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-start lg:gap-8">
+       
+
+          <div
+            class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-8"
+          >
+            <div class="col-span-2">
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+                  18+ Disclaimer
+                </h2>
+
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                  SpinZielona is a fantasy football platform created purely for entertainment and community engagement. All gameplay is entirely free and does not involve any form of real-money transactions, betting, or gambling. No cash prizes are offered, and no virtual assets can be exchanged for money. The platform is intended strictly for individuals aged 18 and above. Performance within the game does not reflect or predict outcomes in real-life sports or any betting-related activity.
+                </p>
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                  Email: support@spinzielona.com
+                </p>
+              </div>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900 dark:text-white">Privacy</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="/privacy/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Privacy Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/cookies/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Cookies Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900 dark:text-white">
+                Links
+              </p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="/refund/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Refund Policy
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/terms/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Terms and Condition
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-2 sm:col-span-1">
+              <p class="font-medium text-gray-900 dark:text-white">Legal</p>
+
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a
+                    href="/legal/"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                  Legalities
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="/#contact"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
+                    Contacts
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-8 border-t border-gray-100 pt-8 dark:border-gray-800">
+          <div class="sm:flex sm:justify-between">
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+              &copy; 2025. spinzielona.com. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/mobile-menu.js"></script>
+    <script src="/assets/js/button.js"></script>
+ 
+  </body>
+</html>
